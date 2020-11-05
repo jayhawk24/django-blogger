@@ -1,17 +1,28 @@
 {% extends "blog/base.html"%}
 
 {% block content%}
+{% for post in post_list %}
+<article class="blog_item">
+    <div class="blog_item_img">
+        <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
+        <a href="#" class="blog_item_date">
+            <h3>{{post.publishedDate|date:"d"}}</h3>
+            <p>{{post.publishedDate|date:"M"}}</p>
+        </a>
+    </div>
 
-<div class="centerstage">
-    {% for post in post_list %}
-    <div class="post">
-        <h1><a href='{% url "post_detail" pk=post.pk%}'>{{post.title}}</a></h1>
-        <div class="date">
-            <p>Published on: {{post.published|date:"D M Y"}}</p>
-        </div>
-        <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{post.approve_comments.count }}</a>
-
-</div>
+    <div class="blog_details">
+        <a class="d-inline-block post" href='{% url "post_detail" pk=post.pk%}'>
+            <h2>{{post.title}}</h2>
+        </a>
+        <p>
+            {{post.text|truncatechars:200}}
+        </p>
+        <ul class="blog-info-link">
+            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+            <li><a href="{% url 'post_detail' pk=post.pk %}"><i class="fa fa-comments"></i> {{post.approvedComment.count }} Comments</a></li>
+        </ul>
+    </div>
+</article>
 {% endfor %}
-</div>
 {% endblock %}
