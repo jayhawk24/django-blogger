@@ -1,19 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900&display=swap");
-/* Normal desktop :1200px. */
-/* Normal desktop :992px. */
-/* Tablet desktop :768px. */
-/* small mobile :320px. */
-/* Large Mobile :480px. */
-/* 1. Theme default css */
+
 @import url("https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900&display=swap");
-/* line 5, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 body {
   font-family: "Muli", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
-
-/* line 12, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 .img {
   max-width: 100%;
   -webkit-transition: 0.3s;
@@ -21,8 +13,6 @@ body {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-
-/* line 16, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 a,
 .button {
   -webkit-transition: 0.3s;
@@ -30,41 +20,29 @@ a,
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-
-/* line 20, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 a:focus,
 .button:focus, button:focus {
   text-decoration: none;
   outline: none;
 }
-
-/* line 25, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 a:focus {
   text-decoration: none;
 }
-
-/* line 28, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
 .footer -menu li a:hover {
   text-decoration: none;
 }
-
-/* line 34, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 a,
 button {
-  color: #1F1F1F;
+  color: #fff;
   outline: medium none;
 }
-
-/* line 39, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Muli", sans-serif;
   color: #001D38;
 }
-
-/* line 43, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 h1 a,
 h2 a,
 h3 a,
@@ -73,19 +51,13 @@ h5 a,
 h6 a {
   color: inherit;
 }
-
-/* line 52, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 ul {
   margin: 0px;
   padding: 0px;
 }
-
-/* line 56, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 li {
   list-style: none;
 }
-
-/* line 59, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 p {
   font-size: 16px;
   font-weight: 300;
@@ -94,8 +66,6 @@ p {
   margin-bottom: 13px;
   font-family: "Muli", sans-serif;
 }
-
-/* line 68, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 label {
   color: #7e7e7e;
   cursor: pointer;
@@ -1085,7 +1055,7 @@ h3 {
 
 /* line 157, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
-  color: black;
+  color: #fff;
   font-size: 15px;
   text-transform: capitalize;
   font-weight: 400;
