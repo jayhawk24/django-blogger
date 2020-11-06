@@ -1,4 +1,4 @@
-/*!
+
  * jQuery Form Plugin
  * version: 3.32.0-2013.04.09
  * @requires jQuery v1.5 or later
@@ -8,11 +8,11 @@
  * Dual licensed under the MIT and GPL licenses.
  * https://github.com/malsup/form#copyright-and-license
  */
-/*global ActiveXObject */
+
 ;(function($) {
 "use strict";
 
-/*
+
     Usage Note:
     -----------
     Do not use both ajaxSubmit and ajaxForm on the same form.  These
@@ -49,7 +49,7 @@
     at the appropriate time.
 */
 
-/**
+
  * Feature detection
  */
 var feature = {};
@@ -71,12 +71,12 @@ $.fn.attr2 = function() {
     return this.attr.apply(this, arguments);
 };
 
-/**
+
  * ajaxSubmit() provides a mechanism for immediately submitting
  * an HTML form using AJAX.
  */
 $.fn.ajaxSubmit = function(options) {
-    /*jshint scripturl:true */
+    
 
     // fast fail if nothing selected (http://dev.jquery.com/ticket/2752)
     if (!this.length) {
@@ -280,7 +280,7 @@ $.fn.ajaxSubmit = function(options) {
                 if (xhr.upload) {
                     xhr.upload.addEventListener('progress', function(event) {
                         var percent = 0;
-                        var position = event.loaded || event.position; /*event.position is deprecated*/
+                        var position = event.loaded || event.position; 
                         var total = event.total;
                         if (event.lengthComputable) {
                             percent = Math.ceil(position / total * 100);
@@ -407,7 +407,7 @@ $.fn.ajaxSubmit = function(options) {
         var SERVER_ABORT = 2;
                 
         function getDoc(frame) {
-            /* it looks like contentWindow or contentDocument do not
+            
              * carry the protocol property in ie8, when running under ssl
              * frame.document is the only valid response document, since
              * the protocol is know but not on the other two objects. strange?
@@ -721,7 +721,7 @@ $.fn.ajaxSubmit = function(options) {
             return (doc && doc.documentElement && doc.documentElement.nodeName != 'parsererror') ? doc : null;
         };
         var parseJSON = $.parseJSON || function(s) {
-            /*jslint evil:true */
+            
             return window['eval']('(' + s + ')');
         };
 
@@ -752,7 +752,7 @@ $.fn.ajaxSubmit = function(options) {
     }
 };
 
-/**
+
  * ajaxForm() provides a mechanism for fully automating form submission.
  *
  * The advantages of using this method instead of ajaxSubmit() are:
@@ -802,7 +802,7 @@ $.fn.ajaxForm = function(options) {
 
 // private event handlers
 function doAjaxSubmit(e) {
-    /*jshint validthis:true */
+    
     var options = e.data;
     if (!e.isDefaultPrevented()) { // if event has been canceled, don't proceed
         e.preventDefault();
@@ -811,7 +811,7 @@ function doAjaxSubmit(e) {
 }
 
 function captureSubmittingElement(e) {
-    /*jshint validthis:true */
+    
     var target = e.target;
     var $el = $(target);
     if (!($el.is("[type=submit],[type=image]"))) {
@@ -847,7 +847,7 @@ $.fn.ajaxFormUnbind = function() {
     return this.unbind('submit.form-plugin click.form-plugin');
 };
 
-/**
+
  * formToArray() gathers form element data into an array of objects that can
  * be passed to any of the following ajax functions: $.get, $.post, or load.
  * Each object in the array has both a 'name' and 'value' property.  An example of
@@ -928,7 +928,7 @@ $.fn.formToArray = function(semantic, elements) {
     return a;
 };
 
-/**
+
  * Serializes form data into a 'submittable' string. This method will return a string
  * in the format: name1=value1&amp;name2=value2
  */
@@ -937,7 +937,7 @@ $.fn.formSerialize = function(semantic) {
     return $.param(this.formToArray(semantic));
 };
 
-/**
+
  * Serializes all field elements in the jQuery object into a query string.
  * This method will return a string in the format: name1=value1&amp;name2=value2
  */
@@ -962,7 +962,7 @@ $.fn.fieldSerialize = function(successful) {
     return $.param(a);
 };
 
-/**
+
  * Returns the value(s) of the element in the matched set.  For example, consider the following form:
  *
  *  <form><fieldset>
@@ -1015,7 +1015,7 @@ $.fn.fieldValue = function(successful) {
     return val;
 };
 
-/**
+
  * Returns the value of the field element.
  */
 $.fieldValue = function(el, successful) {
@@ -1057,7 +1057,7 @@ $.fieldValue = function(el, successful) {
     return $(el).val();
 };
 
-/**
+
  * Clears the form data.  Takes the following actions on the form's input fields:
  *  - input text fields will have their 'value' property set to the empty string
  *  - select elements will have their 'selectedIndex' property set to -1
@@ -1071,7 +1071,7 @@ $.fn.clearForm = function(includeHidden) {
     });
 };
 
-/**
+
  * Clears the selected form elements.
  */
 $.fn.clearFields = $.fn.clearInputs = function(includeHidden) {
@@ -1106,7 +1106,7 @@ $.fn.clearFields = $.fn.clearInputs = function(includeHidden) {
     });
 };
 
-/**
+
  * Resets the form data.  Causes all form elements to be reset to their original value.
  */
 $.fn.resetForm = function() {
@@ -1119,7 +1119,7 @@ $.fn.resetForm = function() {
     });
 };
 
-/**
+
  * Enables or disables any matching elements.
  */
 $.fn.enable = function(b) {
@@ -1131,7 +1131,7 @@ $.fn.enable = function(b) {
     });
 };
 
-/**
+
  * Checks/unchecks any matching checkboxes or radio buttons and
  * selects/deselects and matching option elements.
  */

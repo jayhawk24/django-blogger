@@ -1,4 +1,4 @@
-/**
+
  * ScrollIt
  * ScrollIt.js(scroll•it•dot•js) makes it easy to make long, vertically scrolling pages.
  *
@@ -12,7 +12,7 @@
     var pluginName = 'ScrollIt',
         pluginVersion = '1.0.3';
 
-    /*
+    
      * OPTIONS
      */
     var defaults = {
@@ -27,18 +27,18 @@
 
     $.scrollIt = function(options) {
 
-        /*
+        
          * DECLARATIONS
          */
         var settings = $.extend(defaults, options),
             active = 0,
             lastIndex = $('[data-scroll-index]:last').attr('data-scroll-index');
 
-        /*
+        
          * METHODS
          */
 
-        /**
+        
          * navigate
          *
          * sets up navigation animation
@@ -53,7 +53,7 @@
             }, settings.scrollTime);
         };
 
-        /**
+        
          * doScroll
          *
          * runs navigation() when criteria are met
@@ -64,7 +64,7 @@
             navigate(parseInt(target));
         };
 
-        /**
+        
          * keyNavigation
          *
          * sets up keyboard navigation behavior
@@ -84,7 +84,7 @@
             return true;
         };
 
-        /**
+        
          * updateActive
          *
          * sets the currently active item
@@ -97,7 +97,7 @@
             $('[data-scroll-nav=' + ndx + ']').addClass(settings.activeClass);
         };
 
-        /**
+        
          * watchActive
          *
          * watches currently active item and updates accordingly
@@ -113,7 +113,7 @@
             updateActive(newActive);
         };
 
-        /*
+        
          * runs methods
          */
         $(window).on('scroll',watchActive).scroll();

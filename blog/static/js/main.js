@@ -203,7 +203,7 @@ center: true,
     time: 10000
   });
 
-/* magnificPopup img view */
+
 $('.popup-image').magnificPopup({
 	type: 'image',
 	gallery: {
@@ -211,7 +211,7 @@ $('.popup-image').magnificPopup({
 	}
 });
 
-/* magnificPopup img view */
+
 $('.img-pop-up').magnificPopup({
 	type: 'image',
 	gallery: {
@@ -219,7 +219,7 @@ $('.img-pop-up').magnificPopup({
 	}
 });
 
-/* magnificPopup video view */
+
 $('.popup-video').magnificPopup({
 	type: 'iframe'
 });

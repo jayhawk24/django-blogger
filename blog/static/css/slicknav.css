@@ -1,4 +1,4 @@
-/*!
+
  * SlickNav Responsive Mobile Menu v1.0.10
  * (c) 2016 Josh Cope
  * licensed under MIT
@@ -138,7 +138,7 @@
 
 
 
-  /*===== mobile menu slicknav =====*/
+  
 
 .mobile_menu {
 	position: absolute;
@@ -171,7 +171,7 @@
 	position: relative;
 	z-index: 99;
 }
-/* .slicknav_menu .slicknav_open .slicknav_icon-bar:nth-child(2) {
+
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
